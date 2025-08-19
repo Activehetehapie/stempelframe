@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Technosoft_Structural_Analysis>
+	<BasicData>
+		<Basic Program="twrmw" FileVersion="5.93" ProgramVersion="6.74" TemplateFileName="L:\2022\H220225 Rijnsburg - Hof van Rijnsburg\Technosoft\ST H22.0225-DO-1\H22.0225-B Stempelframe.rww" XMLReadCode="1" Date="2022-03-24" Time="13:09.23"/>
+		<Basic/>
+	</BasicData>
+	<GeneralData>
+		<General File="L:\2022\H220225 Rijnsburg - Hof van Rijnsburg\Technosoft\ST H22.0225-DO-1\H22.0225-B Stempelframe.rww" Project="" Description="" Dimensions="" Date="" CalculationType="Mechanics" Standard="None" ExistingBuilding="New" PriorTo2003="After" AlterationRejection="Alteration" ProjectNr="" Client="" Engineer=""/>
+		<General/>
+	</GeneralData>
+	<GridLines/>
+	<LevelLines/>
+	<Materials>
+		<Material ID="1" Description="S235" Poisson="0.3" EmodulusX="210000000." ExpansionCoefficient="0.000012" SpecificWeight="78.5" MaterialType="Steel" Creep="0."/>
+		<Material ID="2" Description="S355" Poisson="0.3" EmodulusX="210000000." ExpansionCoefficient="0.000012" SpecificWeight="78.5" MaterialType="Steel" Creep="0."/>
+	</Materials>
+	<Sections>
+		<Section ID="1" Description="HEB500" Height="0.5" Width="0.3" Area="0.02386" Torsion="0.00000548" InertiaY="0.001072" ShearDeformationY="0." ThicknessFlange="0.028" ThicknessWeb="0.0145" RootRadius="0.027" NeutralAxisVertical="0.25" MaterialID="1" BarType="Normal" AreaWeightCalculation="0.02386" Interface="Smooth"/>
+		<Section ID="2" Description="B406/10" Height="0.406" Width="0.406" Area="0.012441" Torsion="0.000488" InertiaY="0.000244" ShearDeformationY="0." ThicknessFlange="0.01" ThicknessWeb="0.01" RootRadius="0." NeutralAxisVertical="0.203" MaterialID="2" BarType="Compression" AreaWeightCalculation="0.012441" Interface="Smooth"/>
+		<Section ID="3" Description="B457/10" Height="0.457" Width="0.457" Area="0.014043" Torsion="0.0007018" InertiaY="0.0003509" ShearDeformationY="0." ThicknessFlange="0.01" ThicknessWeb="0.01" RootRadius="0." NeutralAxisVertical="0.2285" MaterialID="2" BarType="Compression" AreaWeightCalculation="0.014043" Interface="Smooth"/>
+		<Section ID="4" Description="B508/12.5" Height="0.508" Width="0.508" Area="0.019458" Torsion="0.001195" InertiaY="0.0005976" ShearDeformationY="0." ThicknessFlange="0.0125" ThicknessWeb="0.0125" RootRadius="0." NeutralAxisVertical="0.254" MaterialID="2" BarType="Compression" AreaWeightCalculation="0.019458" Interface="Smooth"/>
+		<Section ID="5" Description="B610/14.5" Height="0.61" Width="0.61" Area="0.027127" Torsion="0.002406" InertiaY="0.001203" ShearDeformationY="0." ThicknessFlange="0.0145" ThicknessWeb="0.0145" RootRadius="0." NeutralAxisVertical="0.305" MaterialID="2" BarType="Compression" AreaWeightCalculation="0.027127" Interface="Smooth"/>
+		<Section ID="6" Description="B762/16" Height="0.762" Width="0.762" Area="0.037498" Torsion="0.005219" InertiaY="0.00261" ShearDeformationY="0." ThicknessFlange="0.016" ThicknessWeb="0.016" RootRadius="0." NeutralAxisVertical="0.381" MaterialID="2" BarType="Compression" AreaWeightCalculation="0.037498" Interface="Smooth"/>
+	</Sections>
+	<Nodes>
+		<Node ID="1" X="0.419" Z="14.554" SupportLCSAngle="0."/>
+		<Node ID="2" X="3.068" Z="13.489" SupportLCSAngle="0."/>
+		<Node ID="3" X="4.417" Z="13.114" SupportLCSAngle="0."/>
+		<Node ID="4" X="9.598302" Z="11.693802" SupportLCSAngle="15.53"/>
+		<Node ID="5" X="16.599493" Z="9.698165" SupportLCSAngle="0."/>
+		<Node ID="6" X="23.89514" Z="7.682255" SupportLCSAngle="15.53"/>
+		<Node ID="7" X="31.800001" Z="5.5" SupportLCSAngle="15.53"/>
+		<Node ID="8" X="37.995335" Z="3.783319" SupportLCSAngle="0."/>
+		<Node ID="9" X="43.299999" Z="2.3" SupportLCSAngle="0."/>
+		<Node ID="10" X="48.29837" Z="0.894207" SupportLCSAngle="0."/>
+		<Node ID="11" X="51.62" Z="-0." SupportLCSAngle="0."/>
+		<Node ID="12" X="54.598" Z="0.448" SupportLCSAngle="0."/>
+		<Node ID="13" X="59.542" Z="1.191" SupportLCSAngle="0."/>
+		<Node ID="14" X="59.542" Z="5.191" SupportLCSAngle="0."/>
+		<Node ID="15" X="59.542" Z="10.191" SupportLCSAngle="0."/>
+		<Node ID="16" X="59.542" Z="16.191" SupportLCSAngle="0."/>
+		<Node ID="17" X="59.542" Z="19.411" SupportLCSAngle="0."/>
+		<Node ID="18" X="60.203" Z="19.411" SupportLCSAngle="0."/>
+		<Node ID="19" X="62.202" Z="19.411" SupportLCSAngle="0."/>
+		<Node ID="20" X="62.202" Z="21.911" SupportLCSAngle="0."/>
+		<Node ID="21" X="62.202" Z="25.399" SupportLCSAngle="0."/>
+		<Node ID="22" X="62.202" Z="33.243" SupportLCSAngle="0."/>
+		<Node ID="23" X="62.202" Z="39.399" SupportLCSAngle="0."/>
+		<Node ID="24" X="62.202" Z="44.399" SupportLCSAngle="0."/>
+		<Node ID="25" X="62.202" Z="49.399" SupportLCSAngle="0."/>
+		<Node ID="26" X="62.202" Z="54.399" SupportLCSAngle="0."/>
+		<Node ID="27" X="62.202" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="28" X="57.202" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="29" X="52.202" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="30" X="47.202" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="31" X="41.793" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="32" X="36.793" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="33" X="31.793" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="34" X="26.792" Z="59.399" SupportLCSAngle="0."/>
+		<Node ID="35" X="26.71" Z="54.316" SupportLCSAngle="0."/>
+		<Node ID="36" X="26.622" Z="49.228" SupportLCSAngle="1."/>
+		<Node ID="37" X="26.534" Z="44.14" SupportLCSAngle="1."/>
+		<Node ID="38" X="26.451" Z="39.399" SupportLCSAngle="0."/>
+		<Node ID="39" X="26.364" Z="34.399" SupportLCSAngle="0."/>
+		<Node ID="40" X="26.344" Z="33.243" SupportLCSAngle="0."/>
+		<Node ID="41" X="21.600328" Z="34.101925" SupportLCSAngle="0."/>
+		<Node ID="42" X="17.305687" Z="34.832043" SupportLCSAngle="0."/>
+		<Node ID="43" X="13.186" Z="35.563" SupportLCSAngle="0."/>
+		<Node ID="44" X="8.262" Z="36.431" SupportLCSAngle="0."/>
+		<Node ID="45" X="3.338" Z="37.299" SupportLCSAngle="0."/>
+		<Node ID="46" X="2.47" Z="32.375" SupportLCSAngle="0."/>
+		<Node ID="47" X="2.192" Z="30.8" SupportLCSAngle="0."/>
+		<Node ID="48" X="1.485" Z="28.691" SupportLCSAngle="0."/>
+		<Node ID="49" X="1.219" Z="27.184" SupportLCSAngle="0."/>
+		<Node ID="50" X="0.748" Z="24.513" SupportLCSAngle="0."/>
+		<Node ID="51" X="0.511" Z="23.17" SupportLCSAngle="0."/>
+		<Node ID="52" X="0.563" Z="20.928" SupportLCSAngle="0."/>
+		<Node ID="53" X="0.177" Z="18.741" SupportLCSAngle="0."/>
+		<Node ID="54" X="-0." Z="17.736" SupportLCSAngle="0."/>
+	</Nodes>
+	<Bars>
+		<Bar ID="1" StartNodeID="1" EndNodeID="2" SectionID="1" ConnectionCodeStart="ND" ConnectionCodeEnd="NDM"/>
+		<Bar ID="2" StartNodeID="2" EndNodeID="3" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="3" StartNodeID="3" EndNodeID="4" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="4" StartNodeID="4" EndNodeID="5" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="5" StartNodeID="5" EndNodeID="6" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="6" StartNodeID="6" EndNodeID="7" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="7" StartNodeID="7" EndNodeID="8" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="8" StartNodeID="8" EndNodeID="9" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="9" StartNodeID="9" EndNodeID="10" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="10" StartNodeID="10" EndNodeID="11" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="11" StartNodeID="11" EndNodeID="12" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="12" StartNodeID="12" EndNodeID="13" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="13" StartNodeID="13" EndNodeID="14" SectionID="1" ConnectionCodeStart="ND" ConnectionCodeEnd="NDM"/>
+		<Bar ID="14" StartNodeID="14" EndNodeID="15" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="15" StartNodeID="15" EndNodeID="16" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="16" StartNodeID="16" EndNodeID="17" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="ND"/>
+		<Bar ID="17" StartNodeID="17" EndNodeID="18" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="18" StartNodeID="18" EndNodeID="19" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="19" StartNodeID="19" EndNodeID="20" SectionID="1" ConnectionCodeStart="ND" ConnectionCodeEnd="NDM"/>
+		<Bar ID="20" StartNodeID="20" EndNodeID="21" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="21" StartNodeID="21" EndNodeID="22" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="22" StartNodeID="22" EndNodeID="23" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="23" StartNodeID="23" EndNodeID="24" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="24" StartNodeID="24" EndNodeID="25" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="25" StartNodeID="25" EndNodeID="26" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="26" StartNodeID="26" EndNodeID="27" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="27" StartNodeID="27" EndNodeID="28" SectionID="1" ConnectionCodeStart="ND" ConnectionCodeEnd="NDM"/>
+		<Bar ID="28" StartNodeID="28" EndNodeID="29" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="29" StartNodeID="29" EndNodeID="30" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="30" StartNodeID="30" EndNodeID="31" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="31" StartNodeID="31" EndNodeID="32" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="32" StartNodeID="32" EndNodeID="33" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="33" StartNodeID="33" EndNodeID="34" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="34" StartNodeID="34" EndNodeID="35" SectionID="1" ConnectionCodeStart="ND" ConnectionCodeEnd="NDM"/>
+		<Bar ID="35" StartNodeID="35" EndNodeID="36" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="36" StartNodeID="36" EndNodeID="37" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="37" StartNodeID="37" EndNodeID="38" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="38" StartNodeID="38" EndNodeID="39" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="39" StartNodeID="39" EndNodeID="40" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="40" StartNodeID="40" EndNodeID="41" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="41" StartNodeID="41" EndNodeID="42" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="42" StartNodeID="42" EndNodeID="43" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="43" StartNodeID="43" EndNodeID="44" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="44" StartNodeID="44" EndNodeID="45" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="45" StartNodeID="45" EndNodeID="46" SectionID="1" ConnectionCodeStart="ND" ConnectionCodeEnd="NDM"/>
+		<Bar ID="46" StartNodeID="46" EndNodeID="47" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="47" StartNodeID="47" EndNodeID="48" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="48" StartNodeID="48" EndNodeID="49" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="49" StartNodeID="49" EndNodeID="50" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="50" StartNodeID="50" EndNodeID="51" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="51" StartNodeID="51" EndNodeID="52" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="52" StartNodeID="52" EndNodeID="53" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="53" StartNodeID="53" EndNodeID="54" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="54" StartNodeID="54" EndNodeID="1" SectionID="1" ConnectionCodeStart="NDM" ConnectionCodeEnd="NDM"/>
+		<Bar ID="55" StartNodeID="53" EndNodeID="3" SectionID="2" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="56" StartNodeID="12" EndNodeID="14" SectionID="2" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="57" StartNodeID="18" EndNodeID="20" SectionID="2" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="58" StartNodeID="26" EndNodeID="28" SectionID="4" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="59" StartNodeID="33" EndNodeID="35" SectionID="4" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="60" StartNodeID="44" EndNodeID="46" SectionID="4" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="61" StartNodeID="50" EndNodeID="4" SectionID="3" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="62" StartNodeID="10" EndNodeID="15" SectionID="3" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="63" StartNodeID="25" EndNodeID="29" SectionID="5" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="64" StartNodeID="32" EndNodeID="36" SectionID="5" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="65" StartNodeID="43" EndNodeID="49" SectionID="3" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="66" StartNodeID="9" EndNodeID="16" SectionID="5" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="67" StartNodeID="24" EndNodeID="30" SectionID="6" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="68" StartNodeID="31" EndNodeID="37" SectionID="6" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="69" StartNodeID="42" EndNodeID="5" SectionID="5" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="70" StartNodeID="41" EndNodeID="6" SectionID="5" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="71" StartNodeID="40" EndNodeID="7" SectionID="6" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="72" StartNodeID="8" EndNodeID="21" SectionID="6" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="73" StartNodeID="40" EndNodeID="22" SectionID="6" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+		<Bar ID="74" StartNodeID="38" EndNodeID="23" SectionID="6" ConnectionCodeStart="ND" ConnectionCodeEnd="ND"/>
+	</Bars>
+	<FixedSupports/>
+	<SpringSupports>
+		<SpringSupport ID="1" NodeID="6" Direction="X" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+		<SpringSupport ID="2" NodeID="7" Direction="X" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+		<SpringSupport ID="3" NodeID="14" Direction="Z" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+		<SpringSupport ID="4" NodeID="15" Direction="Z" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+		<SpringSupport ID="5" NodeID="16" Direction="Z" SpringConstant="35000." SpringType="Normal" LowerLimit="-700." UpperLimit="700."/>
+		<SpringSupport ID="6" NodeID="18" Direction="X" SpringConstant="14000." SpringType="Normal" LowerLimit="-280." UpperLimit="280."/>
+		<SpringSupport ID="7" NodeID="24" Direction="Z" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+		<SpringSupport ID="8" NodeID="25" Direction="Z" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+		<SpringSupport ID="9" NodeID="36" Direction="Z" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+		<SpringSupport ID="10" NodeID="37" Direction="Z" SpringConstant="28000." SpringType="Normal" LowerLimit="-560." UpperLimit="560."/>
+	</SpringSupports>
+	<PrescribedTranslations/>
+	<Beddings>
+		<Bedding ID="1" BarID="1-54" BeddingValue="2500." BeddingWidth="1." Side="Negative"/>
+		<Bedding/>
+	</Beddings>
+	<LoadCases>
+		<LoadCase ID="1" Description="UGT" SelfWeightZ="0." SelfWeightX="0." LoadCaseType="Permanent" LoadCategory="-1" Psi0="0." Psi1="0." Psi2="0." PsiFactorsCoupling="PerLoad"/>
+		<LoadCase ID="2" Description="BGT" SelfWeightZ="0." SelfWeightX="0." LoadCaseType="Permanent" LoadCategory="-1" Psi0="0." Psi1="0." Psi2="0." PsiFactorsCoupling="PerLoad"/>
+	</LoadCases>
+	<BarLoads>
+		<BarLoad ID="1" LoadCaseID="1" LoadID="1" BarID="1" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="2" LoadCaseID="1" LoadID="2" BarID="2" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="3" LoadCaseID="1" LoadID="3" BarID="3" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="4" LoadCaseID="1" LoadID="4" BarID="4" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="5" LoadCaseID="1" LoadID="5" BarID="5" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="6" LoadCaseID="1" LoadID="6" BarID="6" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="7" LoadCaseID="1" LoadID="7" BarID="7" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="8" LoadCaseID="1" LoadID="8" BarID="8" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="9" LoadCaseID="1" LoadID="9" BarID="9" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="10" LoadCaseID="1" LoadID="10" BarID="10" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="11" LoadCaseID="1" LoadID="11" BarID="11" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="12" LoadCaseID="1" LoadID="12" BarID="12" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="13" LoadCaseID="1" LoadID="13" BarID="13" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="14" LoadCaseID="1" LoadID="14" BarID="14" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="15" LoadCaseID="1" LoadID="15" BarID="15" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="16" LoadCaseID="1" LoadID="16" BarID="16" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="17" LoadCaseID="1" LoadID="17" BarID="17" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="18" LoadCaseID="1" LoadID="18" BarID="18" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="19" LoadCaseID="1" LoadID="19" BarID="19" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="20" LoadCaseID="1" LoadID="20" BarID="20" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="21" LoadCaseID="1" LoadID="21" BarID="21" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="22" LoadCaseID="1" LoadID="22" BarID="22" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="23" LoadCaseID="1" LoadID="23" BarID="23" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="24" LoadCaseID="1" LoadID="24" BarID="24" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="25" LoadCaseID="1" LoadID="25" BarID="25" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="26" LoadCaseID="1" LoadID="26" BarID="26" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="27" LoadCaseID="1" LoadID="27" BarID="27" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="28" LoadCaseID="1" LoadID="28" BarID="28" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="29" LoadCaseID="1" LoadID="29" BarID="29" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="30" LoadCaseID="1" LoadID="30" BarID="30" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="31" LoadCaseID="1" LoadID="31" BarID="31" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="32" LoadCaseID="1" LoadID="32" BarID="32" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="33" LoadCaseID="1" LoadID="33" BarID="33" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="34" LoadCaseID="1" LoadID="34" BarID="34" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="35" LoadCaseID="1" LoadID="35" BarID="35" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="36" LoadCaseID="1" LoadID="36" BarID="36" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="37" LoadCaseID="1" LoadID="37" BarID="37" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="38" LoadCaseID="1" LoadID="38" BarID="38" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="39" LoadCaseID="1" LoadID="39" BarID="39" Type="QZL" LoadStart="85." LoadEnd="85." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="40" LoadCaseID="1" LoadID="40" BarID="40" Type="QZL" LoadStart="106." LoadEnd="106." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="41" LoadCaseID="1" LoadID="41" BarID="41" Type="QZL" LoadStart="106." LoadEnd="106." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="42" LoadCaseID="1" LoadID="42" BarID="42" Type="QZL" LoadStart="106." LoadEnd="106." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="43" LoadCaseID="1" LoadID="43" BarID="43" Type="QZL" LoadStart="106." LoadEnd="106." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="44" LoadCaseID="1" LoadID="44" BarID="44" Type="QZL" LoadStart="106." LoadEnd="106." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="45" LoadCaseID="1" LoadID="45" BarID="45" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="46" LoadCaseID="1" LoadID="46" BarID="46" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="47" LoadCaseID="1" LoadID="47" BarID="47" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="48" LoadCaseID="1" LoadID="48" BarID="48" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="49" LoadCaseID="1" LoadID="49" BarID="49" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="50" LoadCaseID="1" LoadID="50" BarID="50" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="51" LoadCaseID="1" LoadID="51" BarID="51" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="52" LoadCaseID="1" LoadID="52" BarID="52" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="53" LoadCaseID="1" LoadID="53" BarID="53" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="54" LoadCaseID="1" LoadID="54" BarID="54" Type="QZL" LoadStart="114." LoadEnd="114." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="55" LoadCaseID="2" LoadID="1" BarID="1" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="56" LoadCaseID="2" LoadID="2" BarID="2" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="57" LoadCaseID="2" LoadID="3" BarID="3" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="58" LoadCaseID="2" LoadID="4" BarID="4" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="59" LoadCaseID="2" LoadID="5" BarID="5" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="60" LoadCaseID="2" LoadID="6" BarID="6" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="61" LoadCaseID="2" LoadID="7" BarID="7" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="62" LoadCaseID="2" LoadID="8" BarID="8" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="63" LoadCaseID="2" LoadID="9" BarID="9" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="64" LoadCaseID="2" LoadID="10" BarID="10" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="65" LoadCaseID="2" LoadID="11" BarID="11" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="66" LoadCaseID="2" LoadID="12" BarID="12" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="67" LoadCaseID="2" LoadID="13" BarID="13" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="68" LoadCaseID="2" LoadID="14" BarID="14" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="69" LoadCaseID="2" LoadID="15" BarID="15" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="70" LoadCaseID="2" LoadID="16" BarID="16" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="71" LoadCaseID="2" LoadID="17" BarID="17" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="72" LoadCaseID="2" LoadID="18" BarID="18" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="73" LoadCaseID="2" LoadID="19" BarID="19" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="74" LoadCaseID="2" LoadID="20" BarID="20" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="75" LoadCaseID="2" LoadID="21" BarID="21" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="76" LoadCaseID="2" LoadID="22" BarID="22" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="77" LoadCaseID="2" LoadID="23" BarID="23" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="78" LoadCaseID="2" LoadID="24" BarID="24" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="79" LoadCaseID="2" LoadID="25" BarID="25" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="80" LoadCaseID="2" LoadID="26" BarID="26" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="81" LoadCaseID="2" LoadID="27" BarID="27" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="82" LoadCaseID="2" LoadID="28" BarID="28" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="83" LoadCaseID="2" LoadID="29" BarID="29" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="84" LoadCaseID="2" LoadID="30" BarID="30" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="85" LoadCaseID="2" LoadID="31" BarID="31" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="86" LoadCaseID="2" LoadID="32" BarID="32" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="87" LoadCaseID="2" LoadID="33" BarID="33" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="88" LoadCaseID="2" LoadID="34" BarID="34" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="89" LoadCaseID="2" LoadID="35" BarID="35" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="90" LoadCaseID="2" LoadID="36" BarID="36" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="91" LoadCaseID="2" LoadID="37" BarID="37" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="92" LoadCaseID="2" LoadID="38" BarID="38" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="93" LoadCaseID="2" LoadID="39" BarID="39" Type="QZL" LoadStart="68." LoadEnd="68." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="94" LoadCaseID="2" LoadID="40" BarID="40" Type="QZL" LoadStart="87." LoadEnd="87." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="95" LoadCaseID="2" LoadID="41" BarID="41" Type="QZL" LoadStart="87." LoadEnd="87." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="96" LoadCaseID="2" LoadID="42" BarID="42" Type="QZL" LoadStart="87." LoadEnd="87." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="97" LoadCaseID="2" LoadID="43" BarID="43" Type="QZL" LoadStart="87." LoadEnd="87." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="98" LoadCaseID="2" LoadID="44" BarID="44" Type="QZL" LoadStart="87." LoadEnd="87." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="99" LoadCaseID="2" LoadID="45" BarID="45" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="100" LoadCaseID="2" LoadID="46" BarID="46" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="101" LoadCaseID="2" LoadID="47" BarID="47" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="102" LoadCaseID="2" LoadID="48" BarID="48" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="103" LoadCaseID="2" LoadID="49" BarID="49" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="104" LoadCaseID="2" LoadID="50" BarID="50" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="105" LoadCaseID="2" LoadID="51" BarID="51" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="106" LoadCaseID="2" LoadID="52" BarID="52" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="107" LoadCaseID="2" LoadID="53" BarID="53" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+		<BarLoad ID="108" LoadCaseID="2" LoadID="54" BarID="54" Type="QZL" LoadStart="73." LoadEnd="73." DistanceStart="0." DistanceEnd="0." Psi0="0." Psi1="0." Psi2="0."/>
+	</BarLoads>
+	<NodeLoads/>
+	<TemperatureLoads/>
+	<LoadCombinations>
+		<LoadCombination ID="1" Description="Sterkte" Type="Fundamental"/>
+		<LoadCombination ID="2" Description="Vervorming" Type="Characteristic"/>
+	</LoadCombinations>
+	<LoadCombinationSets>
+		<LoadCombinationSet ID="1" LoadCombinationID="1" LoadCaseID="1" IntensityType="Permanent" Factor="1."/>
+		<LoadCombinationSet ID="2" LoadCombinationID="2" LoadCaseID="2" IntensityType="Permanent" Factor="1."/>
+	</LoadCombinationSets>
+</Technosoft_Structural_Analysis>

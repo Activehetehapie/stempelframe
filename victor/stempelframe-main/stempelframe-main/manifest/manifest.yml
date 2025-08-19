@@ -1,0 +1,39 @@
+version: '1'
+entity_types:
+  ProjectFolder:
+    label: Project folder
+    has_designer: false
+    show_children_as: Table
+    show_properties: false
+    children:
+    - Project
+  Project:
+    label: Project
+    has_designer: true
+    show_children_as: Table
+    show_properties: true
+    children:
+      - XMLupload
+      - Stempelframe
+  XMLupload:
+    label: Technosoft XML
+    has_designer: true
+    show_children_as: None
+    show_properties: true
+  Stempelframe:
+    label: Stempelframe
+    has_designer: true
+    show_children_as: None
+    show_properties: true
+entities:
+- entity_type: ProjectFolder
+  properties:
+    name: Projecten
+  children:
+  - entity_type: Project
+    properties:
+      name: Testproject
+    children:
+    - entity_type: Stempelframe
+      properties:
+        name: Stempelframe
