@@ -29,7 +29,7 @@ reading_file = True
 def clean_key(key):
     dissallowed_excel_characters = [':', '\\', '/', '*', '?', '"', '<', '>', '|', '[', ']']
     for char in dissallowed_excel_characters:
-        key = key.replace(char, " ")        
+        key = key.replace(char, " ")
     return key
 
 def refactor_data():
@@ -131,11 +131,6 @@ with open(input_bestand, 'r') as file:
 
 set_item_correctly()
 sort_items()
-
-# for key, value in generated_tables.items():
-#     print(key)
-#     for item in value:
-#         print(item)
 
 reformated_data = refactor_data()
 
