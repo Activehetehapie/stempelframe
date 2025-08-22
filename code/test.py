@@ -1,2 +1,2 @@
-test = '74'
-print(test.upper() == test)
+test = float('74')
+print(test, type(test))
