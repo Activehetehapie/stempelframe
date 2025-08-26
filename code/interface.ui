@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="ExtractKnopen">
+   <widget class="QPushButton" name="ExtractStempels">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Extract knopen</string>
+     <string>Extract stempels</string>
     </property>
    </widget>
    <widget class="QPushButton" name="SearchFile">
@@ -98,6 +98,42 @@
      <set>QAbstractItemView::NoEditTriggers</set>
     </property>
    </widget>
+   <widget class="MPlwidget" name="Graph" native="true">
+    <property name="geometry">
+     <rect>
+      <x>549</x>
+      <y>9</y>
+      <width>581</width>
+      <height>421</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ExportStempels">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>540</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Export stempels</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ExtractWalls">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>490</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Extract walls</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -111,6 +147,14 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MPlwidget</class>
+   <extends>QWidget</extends>
+   <header>mplwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

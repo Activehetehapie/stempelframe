@@ -17,9 +17,9 @@ class Ui_Interface(object):
         Interface.resize(1124, 631)
         self.centralwidget = QtWidgets.QWidget(Interface)
         self.centralwidget.setObjectName("centralwidget")
-        self.ExtractKnopen = QtWidgets.QPushButton(self.centralwidget)
-        self.ExtractKnopen.setGeometry(QtCore.QRect(10, 540, 251, 41))
-        self.ExtractKnopen.setObjectName("ExtractKnopen")
+        self.ExtractStempels = QtWidgets.QPushButton(self.centralwidget)
+        self.ExtractStempels.setGeometry(QtCore.QRect(10, 540, 251, 41))
+        self.ExtractStempels.setObjectName("ExtractStempels")
         self.SearchFile = QtWidgets.QPushButton(self.centralwidget)
         self.SearchFile.setGeometry(QtCore.QRect(10, 440, 251, 41))
         self.SearchFile.setObjectName("SearchFile")
@@ -41,6 +41,15 @@ class Ui_Interface(object):
         self.TableData.setObjectName("TableData")
         self.TableData.setColumnCount(0)
         self.TableData.setRowCount(0)
+        self.Graph = MPlwidget(self.centralwidget)
+        self.Graph.setGeometry(QtCore.QRect(549, 9, 581, 421))
+        self.Graph.setObjectName("Graph")
+        self.ExportStempels = QtWidgets.QPushButton(self.centralwidget)
+        self.ExportStempels.setGeometry(QtCore.QRect(270, 540, 271, 41))
+        self.ExportStempels.setObjectName("ExportStempels")
+        self.ExtractWalls = QtWidgets.QPushButton(self.centralwidget)
+        self.ExtractWalls.setGeometry(QtCore.QRect(270, 490, 271, 41))
+        self.ExtractWalls.setObjectName("ExtractWalls")
         Interface.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Interface)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1124, 21))
@@ -56,10 +65,13 @@ class Ui_Interface(object):
     def retranslateUi(self, Interface):
         _translate = QtCore.QCoreApplication.translate
         Interface.setWindowTitle(_translate("Interface", "MainWindow"))
-        self.ExtractKnopen.setText(_translate("Interface", "Extract knopen"))
+        self.ExtractStempels.setText(_translate("Interface", "Extract stempels"))
         self.SearchFile.setText(_translate("Interface", "Search file"))
         self.SelectedFile.setPlaceholderText(_translate("Interface", "Filename"))
         self.ProcessFile.setText(_translate("Interface", "Process file"))
+        self.ExportStempels.setText(_translate("Interface", "Export stempels"))
+        self.ExtractWalls.setText(_translate("Interface", "Extract walls"))
+from mplwidget import MPlwidget
 
 
 if __name__ == "__main__":
