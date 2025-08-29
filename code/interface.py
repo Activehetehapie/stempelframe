@@ -50,6 +50,9 @@ class Ui_Interface(object):
         self.ExtractWalls = QtWidgets.QPushButton(self.centralwidget)
         self.ExtractWalls.setGeometry(QtCore.QRect(270, 490, 271, 41))
         self.ExtractWalls.setObjectName("ExtractWalls")
+        self.GordingUnityCheck = QtWidgets.QPushButton(self.centralwidget)
+        self.GordingUnityCheck.setGeometry(QtCore.QRect(550, 440, 261, 41))
+        self.GordingUnityCheck.setObjectName("GordingUnityCheck")
         Interface.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Interface)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1124, 21))
@@ -71,6 +74,7 @@ class Ui_Interface(object):
         self.ProcessFile.setText(_translate("Interface", "Process file"))
         self.ExportStempels.setText(_translate("Interface", "Export stempels"))
         self.ExtractWalls.setText(_translate("Interface", "Extract walls"))
+        self.GordingUnityCheck.setText(_translate("Interface", "Gording unity check"))
 from mplwidget import MPlwidget
 
 
