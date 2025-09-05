@@ -1,7 +1,8 @@
 import sys, os, matplotlib, parsefile
 import numpy as np
 from openpyxl.utils.dataframe import dataframe_to_rows
-from profiel import profieldictionary
+
+import properties
 
 from openpyxl import load_workbook
 from datetime import datetime
@@ -70,190 +71,14 @@ class Interface(QMainWindow):
         self.walls = self.Extractwalls()
         for wall in self.walls:
             for rod in wall:
-                rod_dict = self.fill_in_rod_properties(rod)
-
-    def fill_in_rod_properties(self, rod):
-        property_dict = {}
-        property_dict, (aantal, profiel) = self.propertiesMaterialen(property_dict, rod)
-        property_dict = self.propertiesProfiel(property_dict, profiel, aantal)
-        property_dict = self.propertiesBelastingen(property_dict)
-        property_dict = self.propertiesClassificatie(property_dict)
-        property_dict = self.toetsingDoorsnede(property_dict)
-        print(property_dict)
-
-    def toetsingDoorsnede(self, property_dict):
-        property_dict = self.toetsingNormaalkracht(property_dict)
-        property_dict = self.toetsingBuigendMoment(property_dict)
-        property_dict = self.toetsingDwarskracht(property_dict)
-        property_dict = self.toetsingBuigingEnDwarskracht(property_dict)
-        property_dict = self.toetsingBuigingEnNormaalkracht(property_dict)
-        return self.toetsingBuigingEnDwarskrachtEnNormaalkracht(property_dict)
-
-    def toetsingBuigingEnDwarskrachtEnNormaalkracht(self, property_dict):
-        if property_dict["doorsnede klasse druk en buiging"]() < 3:
-            if property_dict["u.c dwarskracht"] <= 0.5:
-                property_dict["rho2"] = lambda: 0
-            else:
-                property_dict["rho2"] = lambda: ((((2*property_dict["UGT Dwarskracht"])/property_dict["aantal"])/property_dict["Rek. dwarskracht vloeien"]())-1)**2
-            property_dict["NVz,Rd"] = lambda: ((property_dict["A"]*property_dict["fy"])-(property_dict["rho2"]()*property_dict["Av"]*property_dict["fy"]))/(1*1000)
-            if ((property_dict["A"]-(2*property_dict["b"]*property_dict["tf"]))/property_dict["A"])<0.5:
-                property_dict["a1"] = ((property_dict["A"]-(2*property_dict["b"]*property_dict["tf"]))/property_dict["A"])
-            else:
-                property_dict["a1"] = 0.5
-            property_dict["a2"] = lambda: property_dict["a1"]*(1-property_dict["rho2"]())
-            property_dict["MN,y,Rd"] = lambda: ((property_dict["Wy-y"]-((property_dict["rho2"]*property_dict["Av"]^2)/(4*property_dict["tw"])))*property_dict["fy"]/1)/10**6
-        else:
-            pass
-        return property_dict
-
-    def toetsingBuigingEnNormaalkracht(self, property_dict):
-        if property_dict["doorsnede klasse druk en buiging"]() < 3:
-            property_dict["NEd/hw*tw*fy/2*gm0"] = lambda: (property_dict["Rek. normaalkracht"]()*1000)/(property_dict["Hw"]*property_dict["tw"]*property_dict["fy"])/2
-            property_dict["a"] = (property_dict["A"]-(2*property_dict["b"]*property_dict["tf"]))/property_dict["A"]
-            if property_dict["u.c normaalkracht"] <= 0.25 and property_dict["NEd/hw*tw*fy/2*gm0"] <= 1:
-                property_dict["u.c buiging en normaalkracht"] = lambda: property_dict["Rek. weerstand tegen buigend moment"]
-            else:
-                property_dict["u.c buiging en normaalkracht"] = lambda: property_dict["Wy-y"]*property_dict["fy"]*((1-property_dict["u.c normaalkracht"]())/(1-(0.5*property_dict["a"])))/1000000
-        else:
-            property_dict["u.c buiging en normaalkracht"] = lambda: (property_dict["Rek. normaalkracht"]()*1000)/(property_dict["A"]*property_dict["fy"])+(property_dict["Rek. buigend moment"]()*1000000/(property_dict["wel"]*property_dict["fy"]))
-        return property_dict
-
-    def toetsingBuigingEnDwarskracht(self, property_dict):
-        if property_dict["u.c dwarskracht"]() <= 0.5:
-            property_dict["rho"] = 0
-        else:
-            property_dict["rho"] = lambda: property_dict["UGT Dwarskracht"]*1.1/property_dict["aantal"]
-        property_dict["My,V,Rd"] = lambda: ((property_dict["Wy-y"]-((property_dict["rho"]*(property_dict["Aw"]**2))/(4*property_dict["tw"])))*property_dict["fy"]/1)/1000000
-        property_dict["u.c buiging en normaalkracht"] = lambda: property_dict["My,V,Rd"]()/property_dict["Rek. buigendmoment"]()
-
-    def toetsingDwarskracht(self, property_dict):
-        property_dict["Rek. dwarskracht"] = lambda: property_dict["UGT Dwarskracht"]*1.1/property_dict["aantal"]
-        if property_dict["doorsnede klasse druk"] <= 2:
-            property_dict["Rek. dwarskracht vloeien"] = property_dict["Av"]*property_dict["S"]/1/1000
-        else:
-            property_dict["Rek. dwarskracht vloeien"] = property_dict["Aw"]*property_dict["S"]/1/1000
-        property_dict["u.c dwarskracht"] = lambda: property_dict["Rek. dwarskracht"]()/ property_dict["Rek. dwarskracht vloeien"]()
-
-    def toetsingBuigendMoment(self, property_dict):
-        property_dict["Rek. buigendmoment"] = lambda: property_dict["UGT Moment"]*1.1/property_dict["aantal"]
-        if property_dict["doorsnede klasse buiging"] <= 2:
-            property_dict["Wy-y"] = property_dict["wpl"]
-            property_dict["Rek. weerstand tegen buigend moment"] = lambda: (property_dict["fy"]*property_dict["wpl"])/1/1000000
-        else:
-            property_dict["Wy-y"] = property_dict["wel"]
-            property_dict["Rek. weerstand tegen buigend moment"] = lambda: (property_dict["fy"]*property_dict["wel"])/1/1000000
-        property_dict["u.c buigend moment"] = lambda: property_dict["Rek. buigendmoment"]()/ property_dict["Rek. weerstand tegen buigend moment"]()
-
-    def toetsingNormaalkracht(self, property_dict):
-        property_dict["Rek. normaalkracht"] = lambda: property_dict["UGT Normaalkracht"]*1.1/property_dict["aantal"]
-        property_dict["Rek. weerstand tegen trek"] = lambda: (property_dict["fy"]*property_dict["A"])/1/1000
-        property_dict["u.c normaalkracht"] = lambda: property_dict["Rek. normaalkracht"]()/ property_dict["Rek. weerstand tegen trek"]()
-
-    def propertiesBelastingen(self, property_dict):
-        property_dict["UGT Normaalkracht"] = 0
-        property_dict["UGT Dwarskracht"] = 0
-        property_dict["UGT Moment"] = 0
-
-        return property_dict
-
-    def propertiesClassificatie(self, property_dict):
-        property_dict["lijf"] = (property_dict["h"]-2*property_dict["tf"]-2*property_dict["r"])/property_dict["tw"]/property_dict["epsilon"]
-        property_dict["flens"] = (property_dict["b"]/2 -(property_dict["tw"]/2)-property_dict["r"])/property_dict["tf"]/property_dict["epsilon"]
-        if property_dict["h/b"] > 1.2 and property_dict["tf"] <= 40:
-            property_dict["knikkromme y-y"] = "a"
-            property_dict["knikkromme z-z"] = "b"
-        elif property_dict["h/b"] > 1.2 and property_dict["tf"] > 40 and property_dict["tf"] <= 100:
-            property_dict["knikkromme y-y"] = "b"
-            property_dict["knikkromme z-z"] = "c"
-        elif property_dict["h/b"] <= 1.2 and property_dict["tf"] <= 100:
-            property_dict["knikkromme y-y"] = "b"
-            property_dict["knikkromme z-z"] = "c"
-        elif property_dict["h/b"] <= 1.2 and property_dict["tf"] > 100:
-            property_dict["knikkromme y-y"] = "d"
-            property_dict["knikkromme z-z"] = "d"
-        else:
-            raise Exception("either h/b is not correct or tf is not correctly check them again")
-
-        if property_dict["lijf"] < 72:
-            property_dict["doorsnede klasse buiging"] = 1
-        elif property_dict["lijf"] < 83:
-            property_dict["doorsnede klasse buiging"] = 2
-        elif property_dict["lijf"] < 124:
-            property_dict["doorsnede klasse buiging"] = 3
-        else:
-            property_dict["doorsnede klasse buiging"] = 4
-
-        if property_dict["lijf"] < 33:
-            property_dict["doorsnede klasse druk"] = 1
-        elif 33 < property_dict["lijf"] < 38:
-            property_dict["doorsnede klasse druk"] = 2
-        elif 38 < property_dict["lijf"] < 42:
-            property_dict["doorsnede klasse druk"] = 3
-        elif property_dict["lijf"] > 42:
-            property_dict["doorsnede klasse druk"] = 4
-
-        property_dict["temp1"] = lambda: (
-        property_dict["lijf"] * ((13 * property_dict["imperfectie"]()) - 1)
-        if property_dict["imperfectie"]() > 0.5
-        else property_dict["lijf"] * property_dict["imperfectie"]()
-        )
-
-        property_dict["temp2"] = lambda: (
-            396 if property_dict["imperfectie"]() > 0.5 else 36
-        )
-
-        property_dict["temp3"] = lambda: (
-            456 if property_dict["imperfectie"]() > 0.5 else 41.5
-        )
-
-        property_dict["doorsnede klasse druk en buiging"] = lambda: (
-            1 if property_dict["temp1"]() < property_dict["temp2"]() and property_dict["temp1"]() < property_dict["temp3"]()
-            else 2 if (property_dict["temp1"]() > 51 and property_dict["temp1"]() < property_dict["temp3"]()) or 
-                    (property_dict["temp1"]() < 51 and property_dict["temp1"]() > property_dict["temp3"]())
-            else 3 if property_dict["temp1"]() > property_dict["temp2"]() and property_dict["temp1"]() > property_dict["temp3"]() else None)
-        return property_dict
-
-    def propertiesProfiel(self, property_dict, profiel, aantal):
-        property_dict["Type Gording"] = profiel
-        property_dict["aantal"] = aantal
-        profielpropertie = profieldictionary[profiel]
-        property_dict["h"] = profielpropertie[0]
-        property_dict["b"] = profielpropertie[1]
-        property_dict["tw"] = profielpropertie[2]
-        property_dict["tf"] = profielpropertie[3]
-        property_dict["wel"] = profielpropertie[4]
-        property_dict["wpl"] = profielpropertie[5]
-        property_dict["A"] = profielpropertie[8]
-        property_dict["r"] = profielpropertie[9]
-        property_dict["ly"] = profielpropertie[10]
-        property_dict["G"] = profielpropertie[12]
-        property_dict["Hw"] = property_dict["b"]-2*property_dict["tf"]
-        property_dict["Av"] = property_dict["A"]-(2*property_dict["b"]*property_dict["tf"])+((property_dict["tw"]+2*property_dict["r"])*property_dict["tf"])
-        property_dict["Af"] = property_dict["b"] * property_dict["tf"]
-        property_dict["Aw"] = property_dict["tw"] * property_dict["Hw"]
-        property_dict["h/b"] = property_dict["h"] / property_dict["b"]
-        return property_dict
-
-
-    def propertiesMaterialen(self, property_dict, rod):
-        STAVEN = self.Findtable("STAVEN")
-        Nr, Profiel = STAVEN[2][rod-1][3].split(":")
-        PROFIEL = self.Findtable("PROFIELEN [mm]")
-        property_dict["S"] = int(PROFIEL[2][int(Nr)-1][2].split(":")[1][1:])
-        property_dict["fy"] = property_dict["S"]
-        match property_dict["fy"]:
-            case 235:
-                property_dict["fu"] = 360
-            case 275:
-                property_dict["fu"] = 430
-            case 355:
-                property_dict["fu"] = 510
-            case 440:
-                property_dict["fu"] = 550
-        property_dict["E"] = 210000
-        property_dict["epsilon"] = 235/property_dict["fy"]
-        property_dict["lambda"] = float(np.pi*np.sqrt(property_dict["E"]/property_dict["fy"]))
-        return property_dict, Profiel.split("*")
+                rod_dict = properties.fill_in_rod_properties(rod, self.tables)
+                print(rod_dict)
+                rod_dict["UGT Normaalkracht"] = 563.88
+                rod_dict["UGT Dwarskracht"] = 561.75
+                uc_items = {k: v for k, v in rod_dict.items() if "u.c" in k}
+                for key, value in uc_items.items():
+                    print(f"{key} → {value()}")
+                exit()
 
     def Extractwalls(self):
         walls = []
